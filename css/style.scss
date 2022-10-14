@@ -1,0 +1,155 @@
+@import 'mixins.scss';
+
+$main-color: #fed74b;
+$main-color-hover: #f4c005;
+$color-line: #828282;
+$span-color: #9e9e9e;
+$bg-btn-time: #d9e8ff;
+$bg-btn-time-hover: #6ba6ff;
+$purple: #7553ff;
+
+* {
+  box-sizing: border-box;
+}
+
+.article {
+  width: 100%;
+  border: 1px solid $color-line;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  position: relative;
+
+  .img-card {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .img-card-block {
+    background: $main-color;
+    border-radius: 0px;
+    position: absolute;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .img-card-block[data-color="yellow"] {
+    background: $main-color;
+    top: 40px;
+  }
+
+  .img-card-block[data-color="purple"] {
+    background: $purple;
+    color: white;
+    top: 0;
+    border-radius: 15px 0px 12px;
+  }
+}
+
+.wrapper {
+  padding: 12px;
+
+  .title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #404040;
+  }
+}
+
+.wrapper-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  span {
+    color: $span-color;
+    font-size: 12px;
+  }
+}
+
+.wrapper-ul {
+  list-style-type: none;
+
+  li {
+    margin-top: 10px;
+    &::before {
+      position: absolute;
+      left: 35px;
+      border-right: 3px solid $main-color;
+      border-top: 3px solid $main-color;
+      border-radius: 1px;
+      content: "";
+      display: block;
+      height: 5px;
+      width: 10px;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+
+  button {
+    background: $bg-btn-time;
+    cursor: pointer;
+    border-radius: 11px;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: all 0.5s;
+
+    &:hover {
+      background: $bg-btn-time-hover;
+    }
+  }
+}
+
+.wrapper-footer {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  .wrapper-footer-price {
+    .footer-price {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 20px;
+      margin: 0;
+    }
+
+    .footer-availability {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 20px;
+      margin: 0;
+    }
+  }
+
+  .btn-more_detailed {
+    background: $main-color;
+    border: 0.5px solid $main-color;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      background: $main-color-hover;
+    }
+  }
+}

@@ -10,13 +10,10 @@ const arrTime = [
   "12:00",
 ];
 
-const article = document.createElement("article");
-article.classList.add("article");
-document.body.append(article);
-
 class createBlock {
   constructor(obj) {
     this.img = obj.img;
+    this.color = obj.color;
     this.blockImgCard = obj.blockImgCard;
     this.title = obj.title;
     this.hour = obj.hour;
@@ -32,10 +29,14 @@ class createBlock {
   }
 
   create() {
+    const article = document.createElement("article");
+    article.classList.add("article");
+    document.body.append(article);
+
     article.innerHTML = `
     <div class="wrapper-img-card">
     <img src=${this.img} alt="peterburg" class="img-card" />
-    <div class="img-card-block" data-color="yellow">
+    <div class="img-card-block" data-color=${this.color}>
       ${this.blockImgCard}
     </div>
   </div>
@@ -72,15 +73,54 @@ class createBlock {
 const block1 = new createBlock({
   img: "/img/peterburg.jpg",
   blockImgCard: "Новинка",
+  color: 'yellow',
   title:
     "АКЦИЯ - Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2019",
   hour: "2",
-  list: ["Билет на целый день", "Билет на целый день", "Билет на целый день"],
+  list: [
+    "Билет на целый день",
+    "Неограниченное число катаний",
+    "6 остановок у главных достопримечательностей",
+  ],
+  price: 900,
+  availability: "1200 р на причале",
+});
+
+const block2 = new createBlock({
+  img: "/img/piter2.png",
+  blockImgCard: "Новинка",
+  color: 'purple',
+  title:
+    "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2020",
+  hour: "2",
+  list: [
+    "Билет на целый день",
+    "Неограниченное число катаний",
+    "6 остановок у главных достопримечательностей",
+  ],
+  price: 900,
+  availability: "1200 р на причале",
+});
+
+const block3 = new createBlock({
+  img: "/img/piter3.png",
+  blockImgCard: "Круглый год",
+  color: 'blue',
+  title:
+    "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2020",
+  hour: "2",
+  list: [
+    "Билет на целый день",
+    "Неограниченное число катаний",
+    "6 остановок у главных достопримечательностей",
+  ],
   price: 900,
   availability: "1200 р на причале",
 });
 
 block1.create();
+block2.create();
+block3.create();
 
 const btnGroupTime = document.body.querySelectorAll(".btn-group");
 const wrapperMain = document.body.querySelector(".wrapper");

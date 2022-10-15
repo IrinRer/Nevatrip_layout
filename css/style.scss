@@ -7,6 +7,7 @@ $span-color: #9e9e9e;
 $bg-btn-time: #d9e8ff;
 $bg-btn-time-hover: #6ba6ff;
 $purple: #7553ff;
+$blue : #099CE8;
 
 * {
   box-sizing: border-box;
@@ -74,6 +75,12 @@ body {
     color: white;
     top: 0;
     border-radius: 15px 0px 12px;
+  }
+
+  .img-card-block[data-color="blue"] {
+    background: $blue;
+    color: white;
+    top: 40px;
   }
 }
 

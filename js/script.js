@@ -46,7 +46,7 @@ class createBlock {
     </h5>
     <div class="wrapper-icon">
       <img
-        src="/icons//clock-circular-outline.svg"
+        src="icons/clock-circular-outline.svg"
         alt="icon-clock-circular"
       />
       <span>${this.hour} часа</span>
@@ -71,7 +71,7 @@ class createBlock {
 }
 
 const block1 = new createBlock({
-  img: "/img/peterburg.jpg",
+  img: "img/peterburg.jpg",
   blockImgCard: "Новинка",
   color: 'yellow',
   title:
@@ -87,7 +87,7 @@ const block1 = new createBlock({
 });
 
 const block2 = new createBlock({
-  img: "/img/piter2.png",
+  img: "img/piter2.png",
   blockImgCard: "Новинка",
   color: 'purple',
   title:
@@ -103,7 +103,7 @@ const block2 = new createBlock({
 });
 
 const block3 = new createBlock({
-  img: "/img/piter3.png",
+  img: "img/piter3.png",
   blockImgCard: "Круглый год",
   color: 'blue',
   title:

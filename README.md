@@ -146,6 +146,8 @@ for (let j = i; j < arr.length; j++) {
 
 ## Как запустить проект 
 
+Можете посмотреть тут: irinrer.github.io/Nevatrip_layout/ 
+
 1. Клонируете репозиторий 
 
 ``git clone https://github.com/IrinRer/Nevatrip_layout.git``
